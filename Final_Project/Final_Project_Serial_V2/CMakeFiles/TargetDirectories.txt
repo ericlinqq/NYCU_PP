@@ -1,0 +1,3 @@
+/mnt/d/PP/Final_Project/Final_Project_Serial_V2/CMakeFiles/rebuild_cache.dir
+/mnt/d/PP/Final_Project/Final_Project_Serial_V2/CMakeFiles/edit_cache.dir
+/mnt/d/PP/Final_Project/Final_Project_Serial_V2/CMakeFiles/DisplayImage.dir

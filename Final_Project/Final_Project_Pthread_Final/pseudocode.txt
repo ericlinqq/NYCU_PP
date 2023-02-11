@@ -1,0 +1,13 @@
+ComputeDisparity:
+  For each Y in ImageL:
+    For each X in ImageL:
+      Compute the template size
+      Compute the number of candidate pixels
+      Losses = []
+      For each candidate pixel: 
+        Compute Disparity Metric over candidate pixel neighborhood and root neighborhood
+        Append Disparity Matric to Losses
+
+      BestIndex = argmin(Losses)
+
+      Disparity[X,Y] = BestIndex

@@ -1,0 +1,152 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 58.33      0.28     0.28 20000000     0.00     0.00  double std::generate_canonical<double, 53ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)
+ 10.42      0.33     0.05 40000000     0.00     0.00  std::__detail::_Mod<unsigned long, 2147483647ul, 16807ul, 0ul, true, true>::__calc(unsigned long)
+  8.33      0.37     0.04 20000000     0.00     0.00  std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::operator()()
+  6.25      0.40     0.03 20000000     0.00     0.00  double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_real_distribution<double>::param_type const&)
+  4.17      0.42     0.02 40000000     0.00     0.00  std::uniform_real_distribution<double>::param_type::a() const
+  4.17      0.44     0.02 20000000     0.00     0.00  std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::_Adaptor(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)
+  3.12      0.46     0.01 40000000     0.00     0.00  std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::min()
+  2.08      0.47     0.01 40000000     0.00     0.00  std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()
+  1.04      0.47     0.01 20000000     0.00     0.00  double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)
+  1.04      0.47     0.01        3     1.67     1.67  std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+  1.04      0.48     0.01        1     5.00     5.00  std::uniform_real_distribution<double>::uniform_real_distribution(double, double)
+  0.00      0.48     0.00 40000000     0.00     0.00  unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long)
+  0.00      0.48     0.00 20000000     0.00     0.00  std::uniform_real_distribution<double>::param_type::b() const
+  0.00      0.48     0.00        3     0.00     1.67  unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long)
+  0.00      0.48     0.00        2     0.00     0.00  std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  0.00      0.48     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.48     0.00        1     0.00     0.00  std::uniform_real_distribution<double>::param_type::param_type(double, double)
+  0.00      0.48     0.00        1     0.00     5.00  std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long)
+  0.00      0.48     0.00        1     0.00     5.00  std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long)
+  0.00      0.48     0.00        1     0.00     0.00  std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  0.00      0.48     0.00        1     0.00     0.00  std::setprecision(int)
+  0.00      0.48     0.00        1     0.00     0.00  std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+  0.00      0.48     0.00        1     0.00     0.00  std::operator~(std::_Ios_Fmtflags)
+  0.00      0.48     0.00        1     0.00     0.00  std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+  0.00      0.48     0.00        1     0.00     0.00  std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+
+			Call graph
+
+
+granularity: each sample hit covers 4 byte(s) for 2.08% of 0.48 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    0.48                 main [1]
+                0.01    0.47 20000000/20000000     double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [2]
+                0.00    0.01       1/1           std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [16]
+                0.01    0.00       1/1           std::uniform_real_distribution<double>::uniform_real_distribution(double, double) [14]
+                0.00    0.00       1/1           std::setprecision(int) [28]
+-----------------------------------------------
+                0.01    0.47 20000000/20000000     main [1]
+[2]     97.9    0.01    0.47 20000000         double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [2]
+                0.03    0.43 20000000/20000000     double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_real_distribution<double>::param_type const&) [3]
+-----------------------------------------------
+                0.03    0.43 20000000/20000000     double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [2]
+[3]     96.9    0.03    0.43 20000000         double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_real_distribution<double>::param_type const&) [3]
+                0.04    0.35 20000000/20000000     std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::operator()() [4]
+                0.02    0.00 40000000/40000000     std::uniform_real_distribution<double>::param_type::a() const [9]
+                0.02    0.00 20000000/20000000     std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::_Adaptor(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [10]
+                0.00    0.00 20000000/20000000     std::uniform_real_distribution<double>::param_type::b() const [23]
+-----------------------------------------------
+                0.04    0.35 20000000/20000000     double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_real_distribution<double>::param_type const&) [3]
+[4]     82.3    0.04    0.35 20000000         std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::operator()() [4]
+                0.28    0.07 20000000/20000000     double std::generate_canonical<double, 53ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [5]
+-----------------------------------------------
+                0.28    0.07 20000000/20000000     std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::operator()() [4]
+[5]     74.0    0.28    0.07 20000000         double std::generate_canonical<double, 53ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [5]
+                0.01    0.05 40000000/40000000     std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()() [6]
+                0.01    0.00 40000000/40000000     std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::min() [11]
+-----------------------------------------------
+                0.01    0.05 40000000/40000000     double std::generate_canonical<double, 53ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [5]
+[6]     12.5    0.01    0.05 40000000         std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()() [6]
+                0.00    0.05 40000000/40000000     unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long) [8]
+-----------------------------------------------
+                0.05    0.00 40000000/40000000     unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long) [8]
+[7]     10.4    0.05    0.00 40000000         std::__detail::_Mod<unsigned long, 2147483647ul, 16807ul, 0ul, true, true>::__calc(unsigned long) [7]
+-----------------------------------------------
+                0.00    0.05 40000000/40000000     std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()() [6]
+[8]     10.4    0.00    0.05 40000000         unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long) [8]
+                0.05    0.00 40000000/40000000     std::__detail::_Mod<unsigned long, 2147483647ul, 16807ul, 0ul, true, true>::__calc(unsigned long) [7]
+-----------------------------------------------
+                0.02    0.00 40000000/40000000     double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_real_distribution<double>::param_type const&) [3]
+[9]      4.2    0.02    0.00 40000000         std::uniform_real_distribution<double>::param_type::a() const [9]
+-----------------------------------------------
+                0.02    0.00 20000000/20000000     double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_real_distribution<double>::param_type const&) [3]
+[10]     4.2    0.02    0.00 20000000         std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::_Adaptor(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [10]
+-----------------------------------------------
+                0.01    0.00 40000000/40000000     double std::generate_canonical<double, 53ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [5]
+[11]     3.1    0.01    0.00 40000000         std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::min() [11]
+-----------------------------------------------
+                0.01    0.00       3/3           unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [13]
+[12]     1.0    0.01    0.00       3         std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long) [12]
+-----------------------------------------------
+                0.00    0.01       3/3           std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [15]
+[13]     1.0    0.00    0.01       3         unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [13]
+                0.01    0.00       3/3           std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long) [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[14]     1.0    0.01    0.00       1         std::uniform_real_distribution<double>::uniform_real_distribution(double, double) [14]
+                0.00    0.00       1/1           std::uniform_real_distribution<double>::param_type::param_type(double, double) [26]
+-----------------------------------------------
+                0.00    0.01       1/1           std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [16]
+[15]     1.0    0.00    0.01       1         std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [15]
+                0.00    0.01       3/3           unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [13]
+-----------------------------------------------
+                0.00    0.01       1/1           main [1]
+[16]     1.0    0.00    0.01       1         std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [16]
+                0.00    0.01       1/1           std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [15]
+-----------------------------------------------
+                0.00    0.00 20000000/20000000     double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_real_distribution<double>::param_type const&) [3]
+[23]     0.0    0.00    0.00 20000000         std::uniform_real_distribution<double>::param_type::b() const [23]
+-----------------------------------------------
+                0.00    0.00       1/2           std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [29]
+                0.00    0.00       1/2           std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [27]
+[24]     0.0    0.00    0.00       2         std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [24]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [33]
+[25]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [25]
+-----------------------------------------------
+                0.00    0.00       1/1           std::uniform_real_distribution<double>::uniform_real_distribution(double, double) [14]
+[26]     0.0    0.00    0.00       1         std::uniform_real_distribution<double>::param_type::param_type(double, double) [26]
+-----------------------------------------------
+                0.00    0.00       1/1           std::fixed(std::ios_base&) [34]
+[27]     0.0    0.00    0.00       1         std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [27]
+                0.00    0.00       1/1           std::operator~(std::_Ios_Fmtflags) [30]
+                0.00    0.00       1/1           std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [29]
+                0.00    0.00       1/2           std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [24]
+                0.00    0.00       1/1           std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [31]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[28]     0.0    0.00    0.00       1         std::setprecision(int) [28]
+-----------------------------------------------
+                0.00    0.00       1/1           std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [27]
+[29]     0.0    0.00    0.00       1         std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [29]
+                0.00    0.00       1/2           std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [24]
+-----------------------------------------------
+                0.00    0.00       1/1           std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [27]
+[30]     0.0    0.00    0.00       1         std::operator~(std::_Ios_Fmtflags) [30]
+-----------------------------------------------
+                0.00    0.00       1/1           std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [27]
+[31]     0.0    0.00    0.00       1         std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [31]
+                0.00    0.00       1/1           std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [32]
+-----------------------------------------------
+                0.00    0.00       1/1           std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [31]
+[32]     0.0    0.00    0.00       1         std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [32]
+-----------------------------------------------
+
+Index by function name
+
+  [25] __static_initialization_and_destruction_0(int, int) [16] std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [28] std::setprecision(int)
+   [9] std::uniform_real_distribution<double>::param_type::a() const [6] std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()() [5] double std::generate_canonical<double, 53ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)
+  [23] std::uniform_real_distribution<double>::param_type::b() const [7] std::__detail::_Mod<unsigned long, 2147483647ul, 16807ul, 0ul, true, true>::__calc(unsigned long) [29] std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+  [26] std::uniform_real_distribution<double>::param_type::param_type(double, double) [12] std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long) [24] std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  [14] std::uniform_real_distribution<double>::uniform_real_distribution(double, double) [8] unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long) [30] std::operator~(std::_Ios_Fmtflags)
+   [2] double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [13] unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [31] std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+   [3] double std::uniform_real_distribution<double>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_real_distribution<double>::param_type const&) [10] std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::_Adaptor(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [32] std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  [11] std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::min() [4] std::__detail::_Adaptor<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, double>::operator()()
+  [15] std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [27] std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)

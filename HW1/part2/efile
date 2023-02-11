@@ -1,0 +1,13 @@
+main.cpp:83:60: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+    values1[i] = -1.f + 4.f * static_cast<float>(rand()) / RAND_MAX;
+                                                         ~ ^~~~~~~~
+/usr/include/stdlib.h:87:18: note: expanded from macro 'RAND_MAX'
+#define RAND_MAX        2147483647
+                        ^~~~~~~~~~
+main.cpp:84:60: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+    values2[i] = -1.f + 4.f * static_cast<float>(rand()) / RAND_MAX;
+                                                         ~ ^~~~~~~~
+/usr/include/stdlib.h:87:18: note: expanded from macro 'RAND_MAX'
+#define RAND_MAX        2147483647
+                        ^~~~~~~~~~
+2 warnings generated.
